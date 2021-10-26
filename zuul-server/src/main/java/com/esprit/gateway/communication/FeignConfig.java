@@ -1,13 +1,13 @@
-package com.esprit.gateway.communication;
+// package com.esprit.gateway.communication;
 
-import org.springframework.context.annotation.Configuration;
+// import org.springframework.context.annotation.Configuration;
 
-import feign.auth.BasicAuthRequestInterceptor;
+// import feign.auth.BasicAuthRequestInterceptor;
 
-@Configuration
-public class FeignConfig {
+// @Configuration
+// public class FeignConfig {
 	
-	public BasicAuthRequestInterceptor mBasicAuthRequestInterceptor() {
-		return new BasicAuthRequestInterceptor("user", "password");
-	}
-}
+// 	public BasicAuthRequestInterceptor mBasicAuthRequestInterceptor() {
+// 		return new BasicAuthRequestInterceptor("user", "password");
+// 	}
+// }
