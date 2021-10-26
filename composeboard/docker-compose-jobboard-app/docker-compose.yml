@@ -37,6 +37,14 @@ services:
     ports:
       - "8099:8099"
     image: "car-reservation"
+  chambrereservation_A:
+    build: ../../CambreReservation
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+      - spring.cloud.config.uri=http://config:8888
+    ports:
+      - "8097:8097"
+    image: "chambre-reservation"
   flightReservation_A:
     build: ../../FlightReservation
     environment:
