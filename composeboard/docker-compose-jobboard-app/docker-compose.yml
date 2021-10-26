@@ -38,7 +38,7 @@ services:
       - "8303:8303"
     image: "reservation-restau"
   chambrereservation_A:
-    build: ../../CambreReservation
+    build: ../../ChambreReservation
     environment:
       - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
       - spring.cloud.config.uri=http://config:8888
