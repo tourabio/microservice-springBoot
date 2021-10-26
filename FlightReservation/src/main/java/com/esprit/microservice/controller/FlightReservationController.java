@@ -42,7 +42,7 @@ public class FlightReservationController {
 
 	@GetMapping
 	@ResponseStatus(HttpStatus.OK)
-	public ResponseEntity<List<FlightReservation>> getFlights(@RequestBody FlightReservation a) {
+	public ResponseEntity<List<FlightReservation>> getFlights() {
 
 		return new ResponseEntity<>(flightService.getAllFlight(), HttpStatus.OK);
 	}

@@ -37,7 +37,7 @@ public class ChambreReservationController {
 
 	@GetMapping
 	@ResponseStatus(HttpStatus.OK)
-	public ResponseEntity<List<ChambreReservation>> getCarReservations(@RequestBody ChambreReservation reservation) {
+	public ResponseEntity<List<ChambreReservation>> getCarReservations() {
 
 		return new ResponseEntity<>(service.getAllCarReservations(), HttpStatus.OK);
 	}
