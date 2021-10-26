@@ -9,18 +9,26 @@ services:
       - "8100:8100"
     image: "event-room-reservation-ms"
   discovery:
-    build:  ../../discovery-server
+    build: ../../discovery-server
     ports:
       - "8761:8761"
     image: "discovery-server"
   job_A:
     build: ../../job-MS
-    environment: 
+    environment:
       - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
       - spring.cloud.config.uri=http://config:8888
     ports:
       - "8182:8180"
     image: "job-service"
+  reservationrestau_A:
+    build: ../../reservation-resto
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+      - spring.cloud.config.uri=http://config:8888
+    ports:
+      - "8280:8280"
+    image: "reservation-restau"
   carreservation_A:
     build: ../../CarReservation
     environment:
@@ -34,12 +42,12 @@ services:
     environment:
       - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
       - spring.cloud.config.uri=http://config:8888
-    
+    ports:
       - "8280:8280"
     image: "flight-reservation"
   candidate_B:
-    build:  ../../candidateMS
-    environment: 
+    build: ../../candidateMS
+    environment:
       - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
       - spring.cloud.config.uri=http://config:8888
     ports:
@@ -48,8 +56,8 @@ services:
     depends_on:
       - job_A
   candidate_C:
-    build:  ../../candidateMS
-    environment: 
+    build: ../../candidateMS
+    environment:
       - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
       - spring.cloud.config.uri=http://config:8888
     ports:
@@ -64,7 +72,7 @@ services:
       - type: bind
         source: ./src/main/resources/centralRepo
         target: /config
-    environment: 
+    environment:
       - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
       - spring.profiles.active=native
     ports:
@@ -72,7 +80,7 @@ services:
     image: "config-server"
   gateway:
     build: ../../zuul-server
-    environment: 
+    environment:
       - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
     ports:
       - "8762:8762"
