@@ -12,7 +12,7 @@ exports.registerWithEureka = function () {
       hostName: hostName,
       ipAddr: ipAddr,
       port: {
-        $: 3100,
+        $: 5000,
         "@enabled": "true",
       },
       vipAddress: "nodejsMS",
