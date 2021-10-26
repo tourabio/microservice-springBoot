@@ -33,6 +33,14 @@ services:
     image: "candidate-service"
     depends_on:
       - job_A
+  nodejs_ms:
+    build: ../../nodejs-ms
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=discovery
+    ports:
+      - "3100:3100"
+    image: "nodejs-ms"
+
   config:
     build: ../../config-server
     command: --spring.profiles.active=native --spring.cloud.config.server.native.searchLocations=/config

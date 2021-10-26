@@ -1,0 +1,3 @@
+com\esprit\reservation\ReservationApplication.class
+com\esprit\reservation\Reservation.class
+com\esprit\reservation\ReservationRepository.class

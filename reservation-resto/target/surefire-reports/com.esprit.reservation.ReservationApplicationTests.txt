@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.esprit.reservation.ReservationApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.966 s - in com.esprit.reservation.ReservationApplicationTests
