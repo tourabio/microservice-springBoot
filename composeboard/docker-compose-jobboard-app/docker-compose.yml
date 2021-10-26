@@ -37,6 +37,14 @@ services:
     ports:
       - "8303:8303"
     image: "reservation-restau"
+  chambrereservation_A:
+    build: ../../CambreReservation
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+      - spring.cloud.config.uri=http://config:8888
+    ports:
+      - "8304:8304"
+    image: "chambre-reservation"
   nodejs_ms:
     build: ../../nodejs-ms
     environment:
