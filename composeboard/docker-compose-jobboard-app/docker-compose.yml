@@ -13,6 +13,14 @@ services:
     ports:
       - "8182:8180"
     image: "job-service"
+  flightReservation_A:
+    build: ../../FlightReservation
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+      - spring.cloud.config.uri=http://config:8888
+    ports:
+      - "8280:8280"
+    image: "flight-reservation"
   candidate_B:
     build:  ../../candidateMS
     environment: 
