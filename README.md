@@ -57,4 +57,4 @@ Notre application est composé de *plusieur microservice* qui fonctionne au mêm
 ## Architecture
 
 **This the project architecture.**
-![Architecture Image](https://github.com/tourabio/microservice-springBoot/img/architecture.png)
+![Architecture Image](/img/architecture.PNG)
