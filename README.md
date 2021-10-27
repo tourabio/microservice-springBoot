@@ -12,7 +12,7 @@ Notre application est composé de *plusieur microservice* qui fonctionne au mêm
     [Java 15](https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html)  
     [Docker](https://www.docker.com/products/docker-desktop)  
 
-  **Clone this repository and apply the following command in the listed repositories.**
+  **Clone this repository and apply the following command in the listed repositories.**  
     _The Command :_  
         ```
         mvn clean install
