@@ -2,10 +2,11 @@
 
 Notre application est composé de *plusieur microservice* qui fonctionne au même temps à l'aide du serveur du dicouverte Eureka. elle permet à ses utilisateurs de faciliter la réservation des voitures, vols, salles des fêtes ... En effet, elle lui permet de trouver tous les hoteles, voitures, salles des fêtes, vols et restaurants à réserver dans la même platforme.
 
-### Installation 
-**You need to follow this instructions to get the project works.**
+## Installation 
+___
+***You need to follow this instructions to get the project works.***
 
-###### What you need before you go?
+#### What you need before you go?
 **You need to have installed : **
   [Maven](https://maven.apache.org/download.cgi)
   [Java 15](https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html)
@@ -37,7 +38,8 @@ Notre application est composé de *plusieur microservice* qui fonctionne au mêm
       docker-compose build
       ```
       
-### Usage
+## Usage
+___
 
 **For every Microservice there is a request link to communicate with**
   Car Reservation MS:
@@ -53,7 +55,7 @@ Notre application est composé de *plusieur microservice* qui fonctionne au mêm
   User Management MS:
       - http://localhost:8762/nodjsms/api/v1/users
       
-### Architecture
+## Architecture
 
 **This the project architecture.**
 ![Architecture Image](https://github.com/tourabio/microservice-springBoot/img/architecture.PNG)
